@@ -52,15 +52,19 @@ document.querySelectorAll('.feature-card, .hero h1, .hero-primary, .pill-contain
     observer.observe(element);
 });
 
-// Register Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-            .then(registration => {
-                console.log('ServiceWorker registration successful');
-            })
-            .catch(err => {
-                console.log('ServiceWorker registration failed: ', err);
-            });
+      navigator.serviceWorker.register('/sw.js')
+        .then(registration => {
+          console.log('ServiceWorker registration successful');
+          
+          // Check for updates every hour
+          setInterval(() => {
+            registration.update();
+          }, 3600000);
+        })
+        .catch(err => {
+          console.log('ServiceWorker registration failed: ', err);
+        });
     });
-}
+  }
