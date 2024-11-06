@@ -3,21 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Atacadão das Baterias - Serviço móvel 24h de baterias em Jaraguá do Sul">
     <title>Atacadão das Baterias - Disk Baterias Jaraguá</title>
-    
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Google+Sans+Text:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Loading Bar -->
+    <div class="loading-bar"></div>
+
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <i class="fas fa-bolt brand-icon"></i>
+            <a href="#" class="navbar-brand hover-state-layer">
+                <span class="state-layer"></span>
+                <i class="material-icons brand-icon">battery_charging_full</i>
                 <div class="brand-text">
                     <span class="brand-primary">Atacadão das Baterias</span>
                     <span class="brand-secondary">Disk Baterias Jaraguá</span>
@@ -26,74 +26,90 @@
         </div>
     </nav>
 
+    <!-- Main Content -->
     <main>
-        <section class="hero">
+        <!-- Hero Section -->
+        <section class="hero fade-in">
             <div class="container">
                 <h1>Problemas com a bateria<span class="accent-dot">?</span></h1>
-                <p class="hero-primary">
-                    <i class="fas fa-clock-rotate-left accent-icon"></i>
-                    Serviço móvel 24h - Vamos até você
-                </p>
+                
+                <div class="hero-primary">
+                    <i class="material-icons accent-icon">local_shipping</i>
+                    <span>Serviço móvel 24h - Vamos até você</span>
+                </div>
+
                 <div class="pill-container">
-                    <div class="pill">
-                        <i class="fas fa-bolt"></i>
-                        Agilidade na Entrega
+                    <div class="chip">
+                        <i class="material-icons">speed</i>
+                        <span>Agilidade na Entrega</span>
                     </div>
-                    <div class="pill">
-                        <i class="fas fa-star"></i>
-                        Excelência na Instalação
+                    <div class="chip">
+                        <i class="material-icons">verified</i>
+                        <span>Excelência na Instalação</span>
                     </div>
                 </div>
-                <p class="hero-secondary">Especialistas em Baterias 24h</p>
+
+                <h2 class="hero-secondary">Especialistas em Baterias 24h</h2>
+
                 <div class="cta-container">
                     <a href="https://wa.me/554799611-8216" class="whatsapp-button" target="_blank" rel="noopener">
-                        <i class="fab fa-whatsapp"></i>
-                        Chamar no WhatsApp
+                        <i class="material-icons">whatsapp</i>
+                        <span>Chamar no WhatsApp</span>
                     </a>
                     <span class="phone-text">(47) 99611-8216</span>
                 </div>
             </div>
         </section>
 
+        <!-- Features Section -->
         <section class="features">
             <div class="container">
                 <div class="features-grid">
+                    <!-- Solutions Column -->
                     <div class="feature-column">
                         <div class="section-header">
-                            <i class="fas fa-tools section-icon"></i>
+                            <i class="material-icons section-icon">build</i>
                             <h2>Soluções</h2>
                         </div>
+
                         <div class="feature-list">
-                            <div class="feature-card elevation-1">
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper blue">
-                                    <i class="fas fa-clock"></i>
+                                    <i class="material-icons">timer</i>
                                 </div>
                                 <div>
                                     <h3>Chegamos em 30 Minutos</h3>
                                     <p>Garantimos Agilidade</p>
                                 </div>
                             </div>
-                            <div class="feature-card elevation-1">
+
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper red">
-                                    <i class="fas fa-truck-fast"></i>
+                                    <i class="material-icons">local_shipping</i>
                                 </div>
                                 <div>
                                     <h3>Entrega & Instalação</h3>
                                     <p>Serviço Integrado</p>
                                 </div>
                             </div>
-                            <div class="feature-card elevation-1">
+
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper green">
-                                    <i class="far fa-calendar-check"></i>
+                                    <i class="material-icons">event</i>
                                 </div>
                                 <div>
                                     <h3>Agende sua Entrega</h3>
                                     <p>Horário Preferencial</p>
                                 </div>
                             </div>
-                            <div class="feature-card elevation-1">
+
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper yellow">
-                                    <i class="fas fa-credit-card"></i>
+                                    <i class="material-icons">payment</i>
                                 </div>
                                 <div>
                                     <h3>Pagamento Flexível</h3>
@@ -103,42 +119,51 @@
                         </div>
                     </div>
 
+                    <!-- Products Column -->
                     <div class="feature-column">
                         <div class="section-header">
-                            <i class="fas fa-car-battery section-icon"></i>
+                            <i class="material-icons section-icon">battery_full</i>
                             <h2>Linha Completa de Baterias</h2>
                         </div>
+
                         <div class="feature-list">
-                            <div class="feature-card elevation-1">
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper purple">
-                                    <i class="fas fa-car"></i>
+                                    <i class="material-icons">directions_car</i>
                                 </div>
                                 <div>
                                     <h3>Baterias para Veículos</h3>
                                     <p>Alta Performance</p>
                                 </div>
                             </div>
-                            <div class="feature-card elevation-1">
+
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper orange">
-                                    <i class="fas fa-truck"></i>
+                                    <i class="material-icons">local_shipping</i>
                                 </div>
                                 <div>
                                     <h3>Soluções para Trucks</h3>
                                     <p>Alta Performance</p>
                                 </div>
                             </div>
-                            <div class="feature-card elevation-1">
+
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper teal">
-                                    <i class="fas fa-motorcycle"></i>
+                                    <i class="material-icons">two_wheeler</i>
                                 </div>
                                 <div>
                                     <h3>Linha Moto</h3>
                                     <p>Alta Performance</p>
                                 </div>
                             </div>
-                            <div class="feature-card elevation-1">
+
+                            <div class="feature-card elevation-1 hover-state-layer">
+                                <span class="state-layer"></span>
                                 <div class="feature-icon-wrapper indigo">
-                                    <i class="fas fa-car-battery"></i>
+                                    <i class="material-icons">power</i>
                                 </div>
                                 <div>
                                     <h3>Energia Estacionária</h3>
@@ -152,21 +177,29 @@
         </section>
     </main>
 
+    <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
-                <div class="address">
-                    <i class="fas fa-location-dot"></i>
+                <address class="address">
+                    <i class="material-icons">location_on</i>
                     <span>R. Pres. Epitácio Pessoa, 1355 - Centro, Jaraguá do Sul - SC, 89251-155</span>
-                </div>
+                </address>
                 <a href="https://wa.me/554799611-8216" class="whatsapp-link" target="_blank" rel="noopener">
-                    <i class="fab fa-whatsapp"></i>
+                    <i class="material-icons">whatsapp</i>
                     <span>(47) 99611-8216</span>
                 </a>
             </div>
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/554799611-8216" class="floating-whatsapp" target="_blank" rel="noopener">
+        <i class="material-icons">whatsapp</i>
+        <span>Chamar</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
 </body>
 </html>
