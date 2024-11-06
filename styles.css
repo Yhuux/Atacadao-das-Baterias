@@ -96,7 +96,7 @@ body {
 .hero {
     padding: 80px 0;
     text-align: center;
-    background-image: url(/images/b515c1bf-953e-4998-a98c-3ae5d4ab1978.jpg);  /* Using placeholder as we can't reference external images */
+    background-image: url(/images/hero-backgroud.jpg);  /* Using placeholder as we can't reference external images */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
