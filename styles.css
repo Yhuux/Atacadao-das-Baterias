@@ -89,38 +89,14 @@ body {
 
 .brand-secondary {
     font-size: 14px;
-    color: var(--surface);
+    color: var(--text-secondary);
 }
 
 /* Hero Section */
 .hero {
     padding: 80px 0;
     text-align: center;
-    background-image: url('/images/hero-background.webp');  /* Update this path to match your image location */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    min-height: 600px;  /* Added to ensure proper height */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.4);  /* Slightly reduced opacity for better image visibility */
-    z-index: 1;
-}
-
-.hero .container {
-    position: relative;
-    z-index: 2;
+    background-color: var(--surface);
 }
 
 .hero h1 {
@@ -128,8 +104,7 @@ body {
     font-size: 56px;
     font-weight: 400;
     margin-bottom: 24px;
-    color: var(--surface);
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);  /* Added text shadow for better readability */
+    color: var(--text-primary);
 }
 
 .accent-dot {
@@ -138,7 +113,7 @@ body {
 
 .hero-primary {
     font-size: 24px;
-    color: var(--surface);
+    color: var(--text-secondary);
     margin-bottom: 32px;
     display: flex;
     align-items: center;
@@ -157,18 +132,15 @@ body {
     margin-bottom: 32px;
 }
 
-
 .pill {
     display: flex;
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    background-color: rgba(255, 255, 255, 0.95);  /* Increased opacity for better visibility */
+    background-color: var(--background);
     border-radius: var(--radius-lg);
     font-size: 16px;
-    color: var(--text-primary);  /* Changed to primary text color for better contrast */
-    backdrop-filter: blur(5px);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  /* Added subtle shadow */
+    color: var(--text-secondary);
 }
 
 .pill i {
@@ -178,9 +150,8 @@ body {
 .hero-secondary {
     font-family: 'Google Sans', sans-serif;
     font-size: 24px;
-    color: var(--surface);
+    color: var(--google-blue);
     margin-bottom: 32px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  /* Added text shadow for better readability */
 }
 
 .cta-container {
@@ -205,18 +176,16 @@ body {
     font-size: 18px;
     font-weight: 500;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  /* Added shadow for depth */
 }
 
 .whatsapp-button:hover {
     transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(37, 211, 102, 0.3);
+    box-shadow: 0 4px 8px rgba(37, 211, 102, 0.3);
 }
 
 .phone-text {
     font-size: 18px;
-    color: var(--surface);
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);  /* Added text shadow for better readability */
+    color: var(--text-secondary);
 }
 
 /* Features Section */
@@ -339,31 +308,18 @@ footer {
     opacity: 0.8;
 }
 
-/* Responsive adjustments */
+/* Responsive Design */
 @media (max-width: 768px) {
-    
-    .hero {
-        padding: 60px 0;
-        min-height: 500px;  /* Adjusted for mobile */
-    }
-    
     .hero h1 {
         font-size: 40px;
     }
 
-    .pill-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .pill {
-        width: 100%;
-        max-width: 300px;
-        justify-content: center;
-    }
-
     .features-grid {
         grid-template-columns: 1fr;
+    }
+
+    .pill-container {
+        flex-direction: column;
     }
 
     .footer-content {
