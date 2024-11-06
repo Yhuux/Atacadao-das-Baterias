@@ -96,7 +96,31 @@ body {
 .hero {
     padding: 80px 0;
     text-align: center;
+    background-image: url(/images/b515c1bf-953e-4998-a98c-3ae5d4ab1978.jpg);  /* Using placeholder as we can't reference external images */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    color: var(--surface); 
+    padding: 80px 0;
+    text-align: center;
     background-color: var(--surface);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);  /* Dark overlay for better text contrast */
+    z-index: 1;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
 }
 
 .hero h1 {
@@ -104,7 +128,7 @@ body {
     font-size: 56px;
     font-weight: 400;
     margin-bottom: 24px;
-    color: var(--text-primary);
+    color: var(--surface);  /* Updated to white for better contrast */
 }
 
 .accent-dot {
@@ -113,7 +137,7 @@ body {
 
 .hero-primary {
     font-size: 24px;
-    color: var(--text-secondary);
+    color: var(--surface);
     margin-bottom: 32px;
     display: flex;
     align-items: center;
@@ -137,10 +161,11 @@ body {
     align-items: center;
     gap: 8px;
     padding: 8px 16px;
-    background-color: var(--background);
+    background-color: rgba(255, 255, 255, 0.9);  /* Semi-transparent white */
     border-radius: var(--radius-lg);
     font-size: 16px;
     color: var(--text-secondary);
+    backdrop-filter: blur(5px);
 }
 
 .pill i {
@@ -150,7 +175,7 @@ body {
 .hero-secondary {
     font-family: 'Google Sans', sans-serif;
     font-size: 24px;
-    color: var(--google-blue);
+    color: var(--surface);  /* Updated to white */
     margin-bottom: 32px;
 }
 
@@ -185,7 +210,8 @@ body {
 
 .phone-text {
     font-size: 18px;
-    color: var(--text-secondary);
+    color: var(--surface);  /* Updated to white */
+
 }
 
 /* Features Section */
@@ -310,6 +336,10 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero {
+        padding: 60px 0;
+    }
+    
     .hero h1 {
         font-size: 40px;
     }
