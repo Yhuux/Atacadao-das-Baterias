@@ -10,7 +10,6 @@ const STATIC_ASSETS = [
   '/index.html',
   '/styles.css',
   '/script.js',
-  '/images/hero-background.webp',
   'https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Google+Sans:wght@400;500&display=swap'
 ];
 
