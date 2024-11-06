@@ -1,6 +1,12 @@
 // Initialize Material-like ripple effect
 function createRipple(event) {
     const button = event.currentTarget;
+    
+    // Remove any existing ripples
+    button.querySelectorAll('.ripple').forEach(oldRipple => {
+        oldRipple.remove();
+    });
+    
     const ripple = document.createElement('span');
     const rect = button.getBoundingClientRect();
     
@@ -12,14 +18,9 @@ function createRipple(event) {
     ripple.style.top = `${event.clientY - rect.top - radius}px`;
     ripple.classList.add('ripple');
     
-    // Remove old ripples
-    button.querySelectorAll('.ripple').forEach(oldRipple => {
-        oldRipple.remove();
-    });
-    
     button.appendChild(ripple);
     
-    // Remove ripple after animation completes
+    // Remove the ripple element after animation completes
     ripple.addEventListener('animationend', () => {
         ripple.remove();
     });
@@ -30,7 +31,7 @@ document.querySelectorAll('.whatsapp-button').forEach(button => {
     button.addEventListener('click', createRipple);
 });
 
-// Rest of your code remains unchanged
+// Rest of your existing code remains the same
 const observerOptions = {
     root: null,
     rootMargin: '0px',
