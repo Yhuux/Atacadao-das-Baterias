@@ -97,7 +97,13 @@ body {
     padding: 80px 0;
     text-align: center;
     background-color: var(--surface);
+    background-image: url('/images/hero-background.webp'); /* Replace with your image path */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    color: white; /* Ensures text contrasts well with the background */
 }
+
 
 .hero h1 {
     font-family: 'Google Sans', sans-serif;
