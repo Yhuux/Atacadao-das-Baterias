@@ -94,7 +94,7 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 80px 0;
+    padding: 80px 20px;
     text-align: center;
     background-color: var(--surface);
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('images/hero-background.webp');
@@ -103,16 +103,20 @@ body {
     background-repeat: no-repeat;
     position: relative;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    margin: 20px auto;
+    border-radius: var(--radius-lg);
+    max-width: 1400px;
 }
 
 
 .hero h1 {
     font-family: 'Google Sans', sans-serif;
-    font-size: 56px;
+    font-size: clamp(32px, 5vw, 56px);
     font-weight: 400;
     margin-bottom: 24px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 0 10px;
 }
 
 .accent-dot {
@@ -120,7 +124,7 @@ body {
 }
 
 .hero-primary {
-    font-size: 24px;
+    font-size: clamp(18px, 3vw, 24px);
     color: white;
     margin-bottom: 32px;
     display: flex;
@@ -128,6 +132,7 @@ body {
     justify-content: center;
     gap: 8px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    padding: 0 15px;
 }
 
 .accent-icon {
@@ -139,6 +144,8 @@ body {
     justify-content: center;
     gap: 16px;
     margin-bottom: 32px;
+    flex-wrap: wrap;
+    padding: 0 10px;
 }
 
 .pill {
@@ -148,10 +155,11 @@ body {
     padding: 8px 16px;
     background-color: rgba(255, 255, 255, 0.9);
     border-radius: var(--radius-lg);
-    font-size: 16px;
+    font-size: clamp(14px, 2vw, 16px);
     color: var(--text-primary);
     backdrop-filter: blur(4px);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    white-space: nowrap;
 }
 
 .pill i {
@@ -160,7 +168,7 @@ body {
 
 .hero-secondary {
     font-family: 'Google Sans', sans-serif;
-    font-size: 24px;
+    font-size: clamp(18px, 3vw, 24px);
     color: white;
     margin-bottom: 32px;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
@@ -171,6 +179,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 16px;
+    padding: 0 10px;
 }
 
 .whatsapp-button {
@@ -179,15 +188,17 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 16px 32px;
+    padding: clamp(12px, 2vw, 16px) clamp(20px, 4vw, 32px);
     background-color: #25D366;
     color: white;
     text-decoration: none;
     border-radius: var(--radius-lg);
     font-family: 'Google Sans', sans-serif;
-    font-size: 18px;
+    font-size: clamp(16px, 2.5vw, 18px);
     font-weight: 500;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: fit-content;
+    max-width: 90%;
 }
 
 .whatsapp-button:hover {
@@ -196,8 +207,8 @@ body {
 }
 
 .phone-text {
-    font-size: 18px;
-    color: white;
+    font-size: clamp(16px, 2.5vw, 18px);
+    color: rgba(255, 255, 255, 0.9);
 }
 
 /* Features Section */
@@ -322,16 +333,33 @@ footer {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+        margin: 10px;
+        border-radius: var(--radius-md);
+    }
+
+    .pill-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .pill {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .cta-container {
+        gap: 12px;
+    }
     .hero h1 {
         font-size: 40px;
     }
 
     .features-grid {
         grid-template-columns: 1fr;
-    }
-
-    .pill-container {
-        flex-direction: column;
     }
 
     .footer-content {
@@ -342,6 +370,61 @@ footer {
     .address {
         flex-direction: column;
         text-align: center;
+    }
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero {
+        padding: 60px 15px;
+        margin: 10px;
+        border-radius: var(--radius-md);
+    }
+
+    .pill-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .pill {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+
+    .cta-container {
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 40px 10px;
+    }
+
+    .whatsapp-button {
+        width: 100%;
+        justify-content: center;
+        max-width: 300px;
+    }
+}
+
+/* Ajustes para pantallas muy grandes */
+@media (min-width: 1400px) {
+    .hero {
+        padding: 100px 40px;
+    }
+}
+
+/* Mejoras de accesibilidad para dispositivos táctiles */
+@media (hover: none) {
+    .whatsapp-button {
+        -webkit-tap-highlight-color: transparent;
+    }
+    
+    .whatsapp-button:active {
+        transform: scale(0.98);
     }
 }
 
