@@ -1,19 +1,15 @@
-/* Google-inspired Variables */
 :root {--google-blue:#4285f4;--google-red:#ea4335;--google-yellow:#fbbc05;--google-green:#34a853;--google-purple:#7b1fa2;--google-orange:#fb8c00;--google-teal:#009688;--google-indigo:#3f51b5;--text-primary:#202124;--text-secondary:#5f6368;--surface:#ffffff;--background:#f8f9fa;--border:#dadce0;--shadow:rgba(60,64,67,0.3);--radius-sm:8px;--radius-md:12px;--radius-lg:24px;--spacing:24px;
 }
-/* Reset & Base Styles */
 * {margin:0;padding:0;box-sizing:border-box;
 }
 body {font-family:'Roboto',sans-serif;line-height:1.5;color:var(--text-primary);background-color:var(--background);
 }
 .container {max-width:1200px;margin:0 auto;padding:0 var(--spacing);
 }
-/* Material Design Elevations */
 .elevation-1 {box-shadow:0 1px 2px rgba(60,64,67,0.3),0 1px 3px 1px rgba(60,64,67,0.15);
 }
 .elevation-2 {box-shadow:0 1px 2px rgba(60,64,67,0.3),0 2px 6px 2px rgba(60,64,67,0.15);
 }
-/* Navigation */
 .navbar {position:sticky;top:0;background-color:var(--surface);padding:12px 0;z-index:1000;transition:box-shadow 0.3s ease;
 }
 .navbar-brand {display:flex;align-items:center;text-decoration:none;color:var(--text-primary);gap:12px;
@@ -26,10 +22,8 @@ body {font-family:'Roboto',sans-serif;line-height:1.5;color:var(--text-primary);
 }
 .brand-secondary {font-size:14px;color:var(--text-secondary);
 }
-/* Hero Section */
 .hero {padding:80px 20px;text-align:center;background-color:var(--surface);background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url('images/hero-background.webp');background-size:cover;background-position:center;background-repeat:no-repeat;position:relative;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1),0 2px 4px -1px rgba(0,0,0,0.06);margin:20px auto;border-radius:var(--radius-lg);max-width:1400px;
 }
-
 .hero h1 {font-family:'Google Sans',sans-serif;font-size:clamp(32px,5vw,56px);font-weight:400;margin-bottom:24px;color:white;text-shadow:2px 2px 4px rgba(0,0,0,0.5);padding:0 10px;
 }
 .accent-dot {color:var(--google-blue);
@@ -54,7 +48,6 @@ body {font-family:'Roboto',sans-serif;line-height:1.5;color:var(--text-primary);
 }
 .phone-text {font-size:clamp(16px,2.5vw,18px);color:rgba(255,255,255,0.9);
 }
-/* Features Section */
 .features {padding:80px 0;
 }
 .features-grid {display:grid;grid-template-columns:repeat(2,1fr);gap:40px;
@@ -85,7 +78,6 @@ body {font-family:'Roboto',sans-serif;line-height:1.5;color:var(--text-primary);
 }
 .feature-card p {font-size:14px;color:var(--text-secondary);
 }
-/* Footer */
 footer {background-color:var(--surface);padding:40px 0;border-top:1px solid var(--border);
 }
 .footer-content {display:flex;justify-content:space-between;align-items:center;gap:24px;
@@ -96,7 +88,6 @@ footer {background-color:var(--surface);padding:40px 0;border-top:1px solid var(
 }
 .whatsapp-link:hover {opacity:0.8;
 }
-/* Responsive Design */
 @media (max-width:768px) {.hero {padding:60px 15px;margin:10px;border-radius:var(--radius-md);}
 .pill-container {flex-direction:column;align-items:center;gap:12px;}
 .pill {width:100%;max-width:300px;justify-content:center;}
@@ -105,7 +96,6 @@ footer {background-color:var(--surface);padding:40px 0;border-top:1px solid var(
 .footer-content {flex-direction:column;text-align:center;}
 .address {flex-direction:column;text-align:center;}
 }
-/* Media Queries */
 @media (max-width:768px) {.hero {padding:60px 15px;margin:10px;border-radius:var(--radius-md);}
 .hero-primary {font-size:16px;padding:0 10px;margin-left:auto;margin-right:auto;}.hero-primary .accent-icon {font-size:16px;}
 .pill-container {flex-direction:column;align-items:center;gap:12px;}
@@ -116,13 +106,10 @@ footer {background-color:var(--surface);padding:40px 0;border-top:1px solid var(
 .hero-primary {gap:6px;padding:0 8px;}
 .whatsapp-button {width:100%;justify-content:center;max-width:300px;}
 }
-/* Ajustes para pantallas muy grandes */
 @media (min-width:1400px) {.hero {padding:100px 40px;}
 }
-/* Mejoras de accesibilidad para dispositivos táctiles */
 @media (hover:none) {.whatsapp-button {-webkit-tap-highlight-color:transparent;}.whatsapp-button:active {transform:scale(0.98);}
 }
-/* Animations */
 @keyframes fadeIn {from {opacity:0;transform:translateY(20px);}to {opacity:1;transform:translateY(0);}
 }
 .fade-in {animation:fadeIn 0.6s ease forwards;
@@ -131,56 +118,37 @@ footer {background-color:var(--surface);padding:40px 0;border-top:1px solid var(
 }
 @keyframes ripple-animation {to {transform:scale(2);opacity:0;}
 }
-/* Melhorias de Acessibilidade */
-
-/* Botão WhatsApp - Ajustar contraste */
 .whatsapp-button {
-    background-color: #1D8E42; /* Cor mais escura para melhorar contraste */
-    color: #FFFFFF; /* Cor do texto */
-    font-size: clamp(16px, 2vw, 20px); /* Escala de tamanho responsiva */
+background-color: #1D8E42; /* Cor mais escura para melhorar contraste */
+color: #FFFFFF; /* Cor do texto */
+font-size: clamp(16px, 2vw, 20px); /* Escala de tamanho responsiva */
 }
-
-/* Botão WhatsApp - Efeito de Foco */
 .whatsapp-button:focus {
-    outline: 2px solid #FFFFFF; /* Borda branca para maior visibilidade */
-    outline-offset: 4px;
+outline: 2px solid #FFFFFF; /* Borda branca para maior visibilidade */
+outline-offset: 4px;
 }
-
-/* Melhorias de Acessibilidade */
-
-/* Botão WhatsApp - Ajustar contraste */
 .whatsapp-button {
-    background-color: #128C4C; /* Cor mais escura para melhorar contraste */
-    color: #FFFFFF; /* Cor do texto */
-    font-size: clamp(16px, 2vw, 20px); /* Escala de tamanho responsiva */
+background-color: #128C4C; /* Cor mais escura para melhorar contraste */
+color: #FFFFFF; /* Cor do texto */
+font-size: clamp(16px, 2vw, 20px); /* Escala de tamanho responsiva */
 }
-
-/* Ícones WhatsApp - Ajuste de cor */
 .whatsapp-button i {
-    color: #FFFFFF; /* Ícone branco para melhor contraste */
+color: #FFFFFF; /* Ícone branco para melhor contraste */
 }
-
-/* Texto da Direção - Melhor contraste */
 .address {
-    color: #3C4043; /* Cinza mais escuro para texto do endereço */
+color: #3C4043; /* Cinza mais escuro para texto do endereço */
 }
-
-/* Foco visível no botão WhatsApp */
 .whatsapp-button:focus {
-    outline: 2px solid #FFFFFF; /* Borda branca para foco visível */
-    outline-offset: 4px;
+outline: 2px solid #FFFFFF; /* Borda branca para foco visível */
+outline-offset: 4px;
 }
-
-/* Melhorias gerais para acessibilidade */
 body {
-    font-size: 18px; /* Tamanho de fonte base maior para legibilidade */
-    line-height: 1.6; /* Melhor espaçamento entre linhas */
+font-size: 18px; /* Tamanho de fonte base maior para legibilidade */
+line-height: 1.6; /* Melhor espaçamento entre linhas */
 }
-
 footer a {
-    text-decoration: underline; /* Links mais distinguíveis */
+text-decoration: underline; /* Links mais distinguíveis */
 }
-
 .footer-content {
-    flex-wrap: wrap; /* Melhor disposição em telas menores */
+flex-wrap: wrap; /* Melhor disposição em telas menores */
 }
