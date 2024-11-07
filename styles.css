@@ -132,14 +132,55 @@ footer {background-color:var(--surface);padding:40px 0;border-top:1px solid var(
 @keyframes ripple-animation {to {transform:scale(2);opacity:0;}
 }
 /* Melhorias de Acessibilidade */
+
 /* Botão WhatsApp - Ajustar contraste */
 .whatsapp-button {
     background-color: #1D8E42; /* Cor mais escura para melhorar contraste */
     color: #FFFFFF; /* Cor do texto */
     font-size: clamp(16px, 2vw, 20px); /* Escala de tamanho responsiva */
 }
+
 /* Botão WhatsApp - Efeito de Foco */
 .whatsapp-button:focus {
     outline: 2px solid #FFFFFF; /* Borda branca para maior visibilidade */
     outline-offset: 4px;
+}
+
+/* Melhorias de Acessibilidade */
+
+/* Botão WhatsApp - Ajustar contraste */
+.whatsapp-button {
+    background-color: #128C4C; /* Cor mais escura para melhorar contraste */
+    color: #FFFFFF; /* Cor do texto */
+    font-size: clamp(16px, 2vw, 20px); /* Escala de tamanho responsiva */
+}
+
+/* Ícones WhatsApp - Ajuste de cor */
+.whatsapp-button i {
+    color: #FFFFFF; /* Ícone branco para melhor contraste */
+}
+
+/* Texto da Direção - Melhor contraste */
+.address {
+    color: #3C4043; /* Cinza mais escuro para texto do endereço */
+}
+
+/* Foco visível no botão WhatsApp */
+.whatsapp-button:focus {
+    outline: 2px solid #FFFFFF; /* Borda branca para foco visível */
+    outline-offset: 4px;
+}
+
+/* Melhorias gerais para acessibilidade */
+body {
+    font-size: 18px; /* Tamanho de fonte base maior para legibilidade */
+    line-height: 1.6; /* Melhor espaçamento entre linhas */
+}
+
+footer a {
+    text-decoration: underline; /* Links mais distinguíveis */
+}
+
+.footer-content {
+    flex-wrap: wrap; /* Melhor disposição em telas menores */
 }
