@@ -131,3 +131,17 @@ footer {background-color:var(--surface);padding:40px 0;border-top:1px solid var(
 }
 @keyframes ripple-animation {to {transform:scale(2);opacity:0;}
 }
+/* Melhorias de Acessibilidade */
+
+/* Botão WhatsApp - Ajustar contraste */
+.whatsapp-button {
+    background-color: #1D8E42; /* Cor mais escura para melhorar contraste */
+    color: #FFFFFF; /* Cor do texto */
+    font-size: clamp(16px, 2vw, 20px); /* Escala de tamanho responsiva */
+}
+
+/* Botão WhatsApp - Efeito de Foco */
+.whatsapp-button:focus {
+    outline: 2px solid #FFFFFF; /* Borda branca para maior visibilidade */
+    outline-offset: 4px;
+}
